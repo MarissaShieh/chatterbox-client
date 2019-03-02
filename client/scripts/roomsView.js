@@ -4,9 +4,12 @@ var RoomsView = {
   $select: $('#rooms select'),
 
   initialize: function() {
+    Parse.readAll((data)=>{Rooms.returnRoom(data.results)})
   },
 
-  render: function() {
+  renderRoom: function(roomName) {
+    this.$select.append(`
+    <option> ${roomName} </option>
+  `);
   }
-
 };
