@@ -3,10 +3,7 @@ var MessagesView = {
   $chats: $('#chats'),
 
   initialize: function() {
-   Parse.readAll((data)=>{console.log(data)});
-   //send data to message
-   //$chats.children.
-   //console.log($.ajax.args[0][0].success);
+   Parse.readAll((data)=>{Messages.returnEachMessage(data.results)});
   },
 
   renderMessage: function(message) {
