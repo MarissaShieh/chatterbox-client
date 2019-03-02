@@ -1,5 +1,5 @@
 var RoomsView = {
-
+  existingRooms: [],
   $button: $('#rooms button'),
   $select: $('#rooms select'),
 
@@ -8,8 +8,11 @@ var RoomsView = {
   },
 
   renderRoom: function(roomName) {
-    this.$select.append(`
-    <option> ${roomName} </option>
-  `);
+    if(!this.existingRooms.includes(roomName)){
+      this.existingRooms.push(roomName);
+      this.$select.append(`
+      <option> ${roomName} </option>
+      `);
+    }
   }
 };
