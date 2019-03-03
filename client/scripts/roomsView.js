@@ -11,8 +11,12 @@ var RoomsView = {
     if(!this.existingRooms.includes(roomName)){
       this.existingRooms.push(roomName);
       this.$select.append(`
-      <option> ${roomName} </option>
+      <option onchange="function(this.innerHTML)"=> ${roomName} </option>
       `);
     }
   }
+
+  // addRoom: function() {
+  //       this.
+  // }
 };
