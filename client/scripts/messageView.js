@@ -2,7 +2,7 @@ var MessageView = {
 
   render: _.template(`
       <div class="chat">
-        <button class="username" type = "button" onclick="Friends.toggleStatus(this.innerHTML)"> <%-username%> </button>
+        <button class="username notFriend" type = "button" onclick="Friends.toggleStatus(this, this.innerHTML)"> <%-username%> </button>
         <div class="text"> <%-text%> </div>
         <div class="roomname"> <%-roomname%> </div>
       </div>
